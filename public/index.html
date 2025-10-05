@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0">
+
+    <!-- No cache storage on index html -->
+    <!-- This is needed so that on new deploys with newly h ashed js/css filenames, the user won't try to load the old -->
+    <!-- filenames from a cached version of index.html -->
+    <!-- <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"> -->
+
+    <meta version="0.9.0.3304">
+    <meta name="theme-color" content="#000">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <!-- Need these in index to generate for texts -->
+    <title>Undead Phoenix</title>
+
+    <meta property="og:image" content="https://d3r93en13fywbg.cloudfront.net/media/roadra_preview_final.png">
+    
+    <!-- To avoid unexpected syntax token error -->
+    <base href="/" />    
+
+    <!-- Google Icons + Roboto font -->
+    <!-- Preconnect to the origin that we'll grab the font from. Saves 100ms by setting up the requests that we'll send later when we get the fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <!-- Preload the fonts, also reduces blocking time. Needs to be crossorigin to prevent CORS errors -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" crossorigin>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but this website doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app">
+      <div class="index-html-spinner">
+        <div class="index-html-spinner-pulse index-html-spinner-pulse1"></div>
+        <div class="index-html-spinner-pulse index-html-spinner-pulse2"></div>
+        <div class="index-html-spinner-pulse index-html-spinner-pulse3"></div>
+      </div>
+    </div>
+    <!-- built files will be auto injected -->
+    
+    <!-- For no cookies enabled -->
+    <script type="text/javascript">
+      if (!navigator.cookieEnabled) {
+        var element = document.getElementById('app');
+        var p = element.parentNode;
+        element.parentNode.removeChild(element);
+        var newElement = document.createElement('div');
+        newElement.setAttribute('id', 'browsererror');
+        newElement.innerHTML = '<div style="width: 100%; margin: 60px auto; box-shadow: 0 0px 8px 0px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px #d6d6d6; padding: 24px; box-sizing: border-box; border-radius: 12px; max-width: 420px;"><div style="display: block; max-width: 700px; text-align: center; font-family: roboto; font-size: 16px; padding: 24px 0px 24px 0px; margin: 0px auto; color: rgb(34, 34, 34); font-weight: 500;">This page requires cookies to be enabled. <br><br> Thank you! &#128522;</div></div>';
+        p.appendChild(newElement);
+      }
+    </script>
+
+    <!-- For IE > 9 -->
+    <script type="text/javascript">
+      if (window.navigator.msPointerEnabled) {
+        var element = document.getElementById('app');
+        var p = element.parentNode;
+        element.parentNode.removeChild(element);
+        var newElement = document.createElement('div');
+        newElement.setAttribute('id', 'browsererror');
+        newElement.innerHTML = '<div style="width: 100%; margin: 60px auto; box-shadow: 0 0px 8px 0px rgba(0, 0, 0, 0.1), inset 0px 0px 0px 1px #d6d6d6; padding: 24px; box-sizing: border-box; border-radius: 12px; max-width: 420px;"> <img style="display: block; box-sizing: border-box; margin: 0px auto; width: 100%; max-width: 200px;" src="logo.png" alt=""><div style="display: block; max-width: 700px; text-align: center; font-family: roboto; font-size: 16px; padding: 24px 0px 24px 0px; margin: 0px auto; color: rgb(34, 34, 34); font-weight: 500;">We\'re sorry but this site is not yet optimized for Internet Explorer. We highly recommend using this sitem with an updated version of Chrome, Edge, Firefox, or Safari. Thank you! &#128522;</div><a class="edge-redirect" href="https://www.microsoft.com/en-us/edge" style="display: block; box-sizing: border-box; text-align: center; font-family: roboto; font-size: 16px; padding: 18px 24px; margin: 0px auto; background-color: #ed1d58; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px;">Get Microsoft Edge</a></div>';
+        p.appendChild(newElement);
+      }
+    </script>
+    <!-- For IE <= 9 THIS IS ACTUAL IN-USE CODE -->
+    <!--[if IE]>
+    <script type="text/javascript">
+      var element = document.getElementById('app');
+      var p = element.parentNode;
+      element.parentNode.removeChild(element);
+      var newElement = document.createElement('div');
+      newElement.setAttribute('id', 'browsererror');
+      newElement.innerHTML = '<div style="width: 100%; margin: 60px auto;"> <img style="display: block; margin: 0px auto; width: 400px;" src="logo.png" alt=""><div style="display: block; max-width: 700px; text-align: center; font-family: roboto; font-size: 24px; padding: 48px; margin: 0px auto; color: rgb(34, 34, 34); font-weight: 500;">We\'re sorry but Roadra is not yet optimized for Internet Explorer. We highly recommend using www.roadra.com with an updated version of Chrome, Edge, Firefox, or Safari. Thank you!</div><a class="edge-redirect" href="https://www.microsoft.com/en-us/edge" style="display: block; width: 250px; text-align: center; font-family: roboto; font-size: 24px; padding: 24px; margin: 0px auto; background-color: #ed1d58; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px;">Get Microsoft Edge</a></div>';
+      p.appendChild(newElement);
+    </script>
+    <![endif]-->
+  </body>
+</html>
