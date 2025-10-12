@@ -153,8 +153,7 @@ export default {
         event.target.src = this.fallback;
       } else {
         this.activeType = "local";
-        event.target.src =
-          "https://d3r93en13fywbg.cloudfront.net/media/imageUnavailable.png";
+        event.target.src = require('@/assets/img/media/image_unavailable.png');
         this.$emit("error");
       }
     },

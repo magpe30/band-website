@@ -10,21 +10,21 @@
       class="main-logo"
       :style="`max-width: ${width}px;`"
       src="@/assets/img/media/logo-white.png"
-      alt="Roadra"
+      alt="Undead Phoenix"
     />
     <img
       v-else-if="black"
       class="main-logo"
       :style="`max-width: ${width}px;`"
       src="@/assets/img/media/logo-black.png"
-      alt="Roadra"
+      alt="Undead Phoenix"
     />
     <img
       v-else
       class="main-logo"
       :style="`max-width: ${width}px;`"
       src="@/assets/img/media/logo.png"
-      alt="Roadra"
+      alt="Undead Phoenix"
     />
   </router-link>
 </template>

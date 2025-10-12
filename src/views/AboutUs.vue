@@ -1,15 +1,18 @@
 <template>
   <div>
-    <section class="hero-section" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+    <section
+      class="hero-section"
+      :style="{ backgroundImage: 'url(' + heroImage + ')' }"
+    >
       <div class="hero-filter">
         <div class="hero-text">
           <h1>Band</h1>
           <p style="margin-top: 24px">
-            Hailing from the vibrant music scene of Wrocław, Poland, Undead Phoenix is a thrash/heavy metal
-            band that's reigniting the spirit of rock 'n' roll. At the core of our music is a simple, yet powerful
+            Hailing from the vibrant music scene of Wrocław, Poland, Undead
+            Phoenix is a thrash/heavy metal band that's reigniting the spirit of
+            rock 'n' roll. At the core of our music is a simple, yet powerful
             message: heavy metal is synonymous with pure, unadulterated fun.
           </p>
-  
         </div>
       </div>
     </section>
@@ -19,13 +22,20 @@
       <div class="container grid-container">
         <div class="row">
           <div class="col image-col">
-            <ImageContainer activeType="local" source="home/lead_guitar.jpg" :w="150" :h="300"/>
+            <ImageContainer
+              activeType="local"
+              source="home/vocal_portrait.jpg"
+              :w="150"
+              :h="300"
+            />
           </div>
           <div class="col text-col">
             <p>
-              <strong>Martin Haze</strong> (vocals, electric guitar) – He loves Big 4 of Thrash and Iron Maiden, though he proudly
-              admits that he listens to Glam all the time(he loves Steel Panther). He believes that a good metal
-              song isn't complete without a guitar solo (Machine Head's "Imperium" is the exception that proves
+              <strong>Martin Haze</strong> (vocals, electric guitar) – He loves
+              Big 4 of Thrash and Iron Maiden, though he proudly admits that he
+              listens to Glam all the time(he loves Steel Panther). He believes
+              that a good metal song isn't complete without a guitar solo
+              (Machine Head's "Imperium" is the exception that proves the rule).
               the rule). Guitar idols: Dimebag Darrell, Andy James.
             </p>
           </div>
@@ -33,39 +43,61 @@
         <div class="row">
           <div class="col text-col">
             <p>
-              <strong>Bart Steel</strong> (electric guitar) - a die-hard Judas Priest fan – he knows every riff and solo by heart and
-              plays them every chance he gets when a guitar is in his hands. One look at him and it's clear who his
-              guitar idol is. He loves classic British rock and heavy metal, but recently he is deeply into 80s
+              <strong>Bart Steel</strong> (electric guitar) - a die-hard Judas
+              Priest fan – he knows every riff and solo by heart and plays them
+              every chance he gets when a guitar is in his hands. One look at
+              him and it's clear who his guitar idol is. He loves classic
+              British rock and heavy metal, but recently he is deeply into 80s
               American glam playing constantly Dokken and Ratt.
             </p>
           </div>
           <div class="col image-col">
-            <ImageContainer activeType="local" source="home/supported_guitar.jpg" :w="100" :h="200"/>
+            <ImageContainer
+              activeType="local"
+              source="home/guitar_portrait.jpg"
+              :w="100"
+              :h="200"
+            />
           </div>
         </div>
         <div class="row">
           <div class="col image-col">
-            <ImageContainer activeType="local" source="home/drums.jpg" :w="100" :h="200"/>
+            <ImageContainer
+              activeType="local"
+              source="home/drums_portrait.jpg"
+              :w="100"
+              :h="200"
+            />
           </div>
           <div class="col text-col">
             <p>
-              <strong>Magnum Marty</strong> (drums) - our latest gem. Deeply rooted in progressive metal, his presence has
-              elevated our skills and playing style to a new level. He's a huge fan of Death and was involved in the
-              black metal scene for many years. However, as soon as he started playing with Undead Phoenix, he
-              found a girlfriend. Coincidence? I don't think so!
+              <strong>Magnum Marty</strong> (drums) - our latest gem. Deeply
+              rooted in progressive metal, his presence has elevated our skills
+              and playing style to a new level. He's a huge fan of Death and was
+              involved in the black metal scene for many years. However, as soon
+              as he started playing with Undead Phoenix, he found a girlfriend.
+              Coincidence? I don't think so!
             </p>
           </div>
         </div>
         <div class="row">
           <div class="col text-col">
             <p>
-              Paul Long Dee (bass guitar) - a bassist who always seems to have a beautiful girl by his side. No one
-              knows why, but the answer might lie in his nickname. A lover of melodic death metal – he's the one
-              focused on infusing Undead Phoenix's music with as much "kick-ass-ness" as possible.
+              Paul Long Dee (bass guitar) - a bassist who always seems to have a
+              beautiful girl by his side. No one knows why, but the answer might
+              lie in his nickname. A lover of melodic death metal – he's the one
+              focused on infusing Undead Phoenix's music with as much
+              "kick-ass-ness" as possible.
             </p>
           </div>
           <div class="col image-col">
-            <ImageContainer activeType="local" source="home/bass.jpg" :w="50" :h="100" class="drum-picture-padding"/>
+            <ImageContainer
+              activeType="local"
+              source="home/bass_portrait.jpg"
+              :w="50"
+              :h="100"
+              class="drum-picture-padding"
+            />
           </div>
         </div>
       </div>
@@ -74,7 +106,7 @@
   </div>
 </template>
 <script>
-import heroImage from '../assets/img/home/about_us.jpg';
+import heroImage from "@/assets/img/home/about_us_section.jpg";
 import ImageContainer from "@/components/general/styleComponents/ImageContainer.vue";
 import MainFooter from "@/components/header/MainFooter.vue";
 
@@ -83,13 +115,13 @@ export default {
   data() {
     return {
       heroImage,
-    }
+    };
   },
   components: {
     ImageContainer,
     MainFooter,
-  }
-}
+  },
+};
 </script>
 <style scoped>
 .hero-section {
@@ -169,7 +201,8 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .hero-text, .container {
+  .hero-text,
+  .container {
     padding: 20px; /* Adjusts padding to ensure usability on mobile */
   }
 
@@ -190,4 +223,3 @@ h1 {
   }
 }
 </style>
-

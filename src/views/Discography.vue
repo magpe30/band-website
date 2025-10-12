@@ -1,14 +1,20 @@
 <template>
   <div>
-    <section class="hero-section" :style="{ backgroundImage: 'url(' + heroImage + ')' }">
+    <section
+      class="hero-section"
+      :style="{ backgroundImage: 'url(' + heroImage + ')' }"
+    >
       <div class="hero-filter">
         <div class="hero-text">
           <h1>Music</h1>
           <p style="margin-top: 24px">
-            In an era where the essence of rock seems to be fading, both in Poland and globally, we strive to
-            bring back the exhilarating joy that defines this genre. Our journey in music is deeply rooted in old-
-            school heavy metal, a style that has been our companion since our earliest forays into music. This rich
-            legacy is evident in our sound, which is both a homage to the classics and a fresh take on the genre.
+            In an era where the essence of rock seems to be fading, both in
+            Poland and globally, we strive to bring back the exhilarating joy
+            that defines this genre. Our journey in music is deeply rooted in
+            old- school heavy metal, a style that has been our companion since
+            our earliest forays into music. This rich legacy is evident in our
+            sound, which is both a homage to the classics and a fresh take on
+            the genre.
           </p>
         </div>
       </div>
@@ -25,7 +31,8 @@
             :src="'https://www.youtube.com/embed/' + video.id"
             frameborder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
+            allowfullscreen
+          >
           </iframe>
         </div>
       </div>
@@ -34,7 +41,7 @@
   </div>
 </template>
 <script>
-import heroImage from '../assets/img/home/music_hero.jpg';
+import heroImage from "@/assets/img/home/music_section.jpg";
 //import GenImage from "@/components/general/styleComponents/GenImage.vue";
 import MainFooter from "@/components/header/MainFooter.vue";
 
@@ -50,22 +57,22 @@ export default {
       videos: [
         {
           title: "D.I.E",
-          id: "tQdbFHny1LM"
+          id: "tQdbFHny1LM",
         },
         {
           title: "Bulldozer",
-          id: "_csdVpwetFo"
+          id: "_csdVpwetFo",
         },
         {
           title: "Seek & destroy(cover)",
-          id: "yzLzQQE_gSg"
+          id: "yzLzQQE_gSg",
         },
         {
           title: "Undead Phoenix for Steel Panther's Opener",
-          id: "Mp8VkNlkPeI?start=11"
-        }
-      ]
-    }
+          id: "Mp8VkNlkPeI?start=11",
+        },
+      ],
+    };
   },
 };
 </script>

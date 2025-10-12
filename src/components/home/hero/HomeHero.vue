@@ -1,11 +1,17 @@
 <template>
   <div>
     <div class="hero-wrapper">
-      <img :src="heroImage" alt="Hero Image" class="main-photo" loading="lazy">
-      <img :src="logoBlack" alt="Band Logo" class="band-logo" loading="lazy"/>
+      <img
+        :src="heroImage"
+        alt="Hero Image"
+        class="main-photo"
+        loading="lazy"
+      />
+      <img :src="logoBlack" alt="Band Logo" class="band-logo" loading="lazy" />
     </div>
     <div class="links">
-      <a v-for="item in socialMedia"
+      <a
+        v-for="item in socialMedia"
         :key="item.name"
         :href="item.siteUrl"
         target="_blank"
@@ -18,8 +24,8 @@
 </template>
 
 <script>
-import heroImage from '../../../assets/img/home/hero-image.jpg';
-import logoBlack from '../../../assets/img/media/logo-white.png';
+import heroImage from "../../../assets/img/home/hero_section_img.jpg";
+import logoBlack from "../../../assets/img/media/logo.png";
 import Youtube from "@/components/general/icons/logos/Youtube.vue";
 import Facebook from "@/components/general/icons/logos/Facebook.vue";
 import Spotify from "@/components/general/icons/logos/Spotify.vue";
@@ -43,29 +49,30 @@ export default {
         {
           name: "youtube",
           componentLogo: Youtube,
-          siteUrl: "https://www.youtube.com/@undeadphoenixband"
+          siteUrl: "https://www.youtube.com/@undeadphoenixband",
         },
         {
           name: "instagram",
           componentLogo: Instagram,
-          siteUrl: "https://www.instagram.com/undeadphoenixband"
+          siteUrl: "https://www.instagram.com/undeadphoenixband",
         },
         {
           name: "spotify",
           componentLogo: Spotify,
-          siteUrl: "https://open.spotify.com/artist/4YmBhrdeJByfwoI4uinMrC?si=_SfmphrQRX-cNn_iHOP17Q"
+          siteUrl:
+            "https://open.spotify.com/artist/4YmBhrdeJByfwoI4uinMrC?si=_SfmphrQRX-cNn_iHOP17Q",
         },
         {
           name: "facebook",
           componentLogo: Facebook,
-          siteUrl: "https://www.facebook.com/undeadphoenixband"
+          siteUrl: "https://www.facebook.com/undeadphoenixband",
         },
         {
           name: "mail",
           componentLogo: Gmail,
-          siteUrl: "undeadphoenixband@gmail.com"
+          siteUrl: "undeadphoenixband@gmail.com",
         },
-      ] 
+      ],
     };
   },
 };
