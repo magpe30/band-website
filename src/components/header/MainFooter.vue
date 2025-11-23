@@ -24,7 +24,7 @@
         </div>
       </div>
       <div class="terms-wrapper">
-        <p>2024 UNDEAD PHOENIX © - All rights reserved.</p>
+        <p>{{ new Date().getFullYear() }} UNDEAD PHOENIX © - All rights reserved.</p>
         <p style="font-size: 10px">Designed & Developed by 
           <a 
             href="https://github.com/magpe30" 

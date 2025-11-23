@@ -16,6 +16,7 @@
         :href="item.siteUrl"
         target="_blank"
         class="social-icon"
+        :class="{ 'youtube-icon': item.name === 'youtube' }"
       >
         <component :is="item.componentLogo"></component>
       </a>
@@ -111,6 +112,16 @@ export default {
 
 .social-icon {
   text-decoration: none;
+}
+
+.social-icon ::v-deep svg {
+  width: 40px;
+  height: 40px;
+}
+
+.youtube-icon svg {
+  width: 44px;
+  height: 44px;
 }
 
 .social-icon:hover {
